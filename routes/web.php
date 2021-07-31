@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/the-loai', [App\Http\Controllers\TheLoaiController::class, 'index']);
 Route::post('/the-loai-them', [App\Http\Controllers\TheLoaiController::class, 'store']);
@@ -27,4 +26,13 @@ Route::get('/chuong-xoa/{id}', [App\Http\Controllers\ChuongController::class, 'd
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'trangchu']);
 Route::get('/chi-tiet-truyen/{id}', [App\Http\Controllers\HomeController::class, 'chitiettruyen']);
-Route::get('/doc-truyen/{idt}', [App\Http\Controllers\HomeController::class, 'doctruyen']);
+Route::get('/doc-truyen/{idt}/{idc}', [App\Http\Controllers\HomeController::class, 'doctruyen']);
+Route::post('/tim-kiem-truyen', [App\Http\Controllers\HomeController::class, 'timkiemtruyen']);
+Route::get('/tim-kiem-truyen', [App\Http\Controllers\HomeController::class, 'trangchu']);
+
+Route::get('/loc/{id_theloai}', [App\Http\Controllers\HomeController::class, 'loc']);
+
+Route::get('/lien-he', [App\Http\Controllers\LienHeController::class, 'lienhe']);
+Route::get('/quan-ly-lien-he', [App\Http\Controllers\LienHeController::class, 'quanlylienhe']);
+Route::get('/xoa-lien-he', [App\Http\Controllers\LienHeController::class, 'xoalienhe']);
+Route::post('/them-lien-he', [App\Http\Controllers\LienHeController::class, 'themlienhe']);

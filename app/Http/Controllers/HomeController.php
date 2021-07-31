@@ -11,8 +11,9 @@ class HomeController extends Controller
     
     public function trangchu()
     {
-        $truyen=Truyen::all();
-        return view('home.trang_chu',compact('truyen'));
+        $truyen=Truyen::orderBy('id_truyen', 'desc')->get();
+        $theloai=TheLoai::all();
+        return view('home.trang_chu',compact('truyen','theloai'));
     }
     public function chitiettruyen($id)
     {
@@ -20,11 +21,29 @@ class HomeController extends Controller
         $chuong=Chuong::where('id_truyen',$id)->get();
         return view('home.chi_tiet_truyen',compact('truyen','chuong'));
     }
-    public function doctruyen($idt)
+    public function doctruyen($idt,$idc)
     {
+
         $truyen=Truyen::find($idt);
-        $chuong=Chuong::where('id_truyen',$idt)->paginate(1);//->where('sothutu_chuong',$stt)
+        $chuong=Chuong::find($idc);
+        $chuong->luotxem_chuong++;
+        $chuong->save();
+        
         return view('home.doc_truyen',compact('chuong','truyen'));
-        //return $chuong;
+    }
+    function timkiemtruyen(Request $r){
+        $tukhoa=$r->tktk;
+        //$lt=LoaiBaiViet::all();
+        $truyen=Truyen::join('theloai', 'truyen.id_theloai', 'theloai.id_theloai')
+                    ->where('ten_truyen','like',"%$tukhoa%")
+                    ->get();//->stake(30)->paginate(5);
+        return view('home.tim_kiem_truyen',compact('truyen','tukhoa'));
+    }
+    public function loc($id_theloai)
+    {
+        $truyen=Truyen::where('id_theloai',$id_theloai)->get();
+        $xn=$id_theloai;
+        $theloai=TheLoai::all();
+        return view('home.trang_chu',compact('truyen','theloai','xn'));
     }
 }

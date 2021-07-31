@@ -14,7 +14,9 @@ class ChuongController extends Controller
     public function index()
     {
         $chuong = Chuong::join('truyen', 'chuong.id_truyen', 'truyen.id_truyen')->get();
-        return view('admin.chuong',compact('chuong'));
+        $truyen=Truyen::orderBy('id_truyen','desc')->get();
+        $chuon=Chuong::all();
+        return view('admin.chuong',compact('chuong','truyen','chuon'));
     }
 
     public function create()
@@ -32,11 +34,6 @@ class ChuongController extends Controller
         $new->ngaythem_chuong = date('Y-m-d');
         $new->save();
         return redirect('/chuong')->with('msg','Thêm thành công');
-    }
-
-    public function show($id)
-    {
-        //
     }
 
     public function edit($id)
@@ -57,6 +54,6 @@ class ChuongController extends Controller
     public function destroy($id)
     {
         Chuong::destroy($id);
-        return back();
+        return back()->with('msg','Xóa thành công');
     }
 }

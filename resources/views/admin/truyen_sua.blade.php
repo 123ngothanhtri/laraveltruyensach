@@ -35,7 +35,7 @@
                     <input type="text" name="ipmt" value="{{ $truyen->mota_truyen }}" required class="form-control">
 
                     Tác giả
-                    <input type="text" name="iptg" value="{{ $truyen->tacgia_truyen }}" class="form-control">
+                    <input type="text" name="iptg" value="{{ $truyen->tacgia_truyen }}" class="form-control" required>
                     Ngày phát hành
                     <input class="form-control" type="date" value="{{ $truyen->ngayphathanh_truyen }}" name="ipnph" required>
 
@@ -45,7 +45,7 @@
                         <img id="output_image" class="w-25" />
                     </div> --}}
                     <br>
-                    <input type="submit" value="Thêm" class="btn btn-info">
+                    <input type="submit" value="Lưu lại" class="btn btn-info">
                 </form>
         </div>
     </div>
