@@ -11,7 +11,8 @@ class HomeController extends Controller
     
     public function trangchu()
     {
-        $truyen=Truyen::orderBy('id_truyen', 'desc')->get();
+        //$truyen=Truyen::orderBy('id_truyen', 'desc')->get();
+        $truyen=Truyen::orderBy('id_truyen', 'desc')->paginate(9);
         $theloai=TheLoai::all();
         return view('home.trang_chu',compact('truyen','theloai'));
     }
@@ -23,13 +24,13 @@ class HomeController extends Controller
     }
     public function doctruyen($idt,$idc)
     {
-
+        $dschuong=Chuong::where('id_truyen',$idt)->get();
         $truyen=Truyen::find($idt);
         $chuong=Chuong::find($idc);
         $chuong->luotxem_chuong++;
         $chuong->save();
         
-        return view('home.doc_truyen',compact('chuong','truyen'));
+        return view('home.doc_truyen',compact('chuong','truyen','dschuong'));
     }
     function timkiemtruyen(Request $r){
         $tukhoa=$r->tktk;
@@ -41,7 +42,7 @@ class HomeController extends Controller
     }
     public function loc($id_theloai)
     {
-        $truyen=Truyen::where('id_theloai',$id_theloai)->get();
+        $truyen=Truyen::where('id_theloai',$id_theloai)->paginate(9);
         $xn=$id_theloai;
         $theloai=TheLoai::all();
         return view('home.trang_chu',compact('truyen','theloai','xn'));

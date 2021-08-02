@@ -37,4 +37,5 @@
             </div>
         @endforeach
     </div>
+    <div class="d-flex justify-content-center ">{!! $truyen->links() !!}</div>
 @endsection
