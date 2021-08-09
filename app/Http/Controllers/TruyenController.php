@@ -56,11 +56,11 @@ class TruyenController extends Controller
     {
         $capnhat=Truyen::find($r->ipidt);
         $capnhat->ten_truyen = $r->ipt;
-        $capnhat->id_theloai = $r->iptl;
+        //$capnhat->id_theloai = $r->iptl;
         $capnhat->ngayphathanh_truyen = $r->ipnph;
         $capnhat->trangthai_truyen = $r->iptt;
         $capnhat->mota_truyen = $r->ipmt;
-        $capnhat->tacgia_truyen = $r->iptg;
+        $capnhat->tacgia_truyen = $r->iptg; 
         //$capnhat->hinhanh_truyen = $r->file('ipha')->store('hinhanh','public');
         //Storage::disk('public')->putFile('hinhanh', $r->file('input_hinhanh'));
 

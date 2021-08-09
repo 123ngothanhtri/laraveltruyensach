@@ -15,7 +15,7 @@
 
 
         <div class="card my-3 ">
-            <div class="card-header font-weight-bold">
+            <div class="card-header font-weight-bold alert-secondary">
                 {{ $ttttt->ten_truyen }}
             </div>
             <div class="card-body">

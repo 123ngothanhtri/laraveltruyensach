@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="card " style="max-width: 500px">
+    <div class="card" style="max-width: 500px">
         <div class="card-header">
             <h4>Cập nhật truyện</h4>
         </div>
@@ -12,7 +12,7 @@
                     {{ session('msg') }}<button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
             @endif
-                <form action="{{ url('truyen-them') }}" method="post" enctype="multipart/form-data" class="form-group">@csrf
+                <form action="{{ url('truyen-sua') }}" method="post" enctype="multipart/form-data" class="form-group">@csrf
                     <input type="hidden" name="ipidt" value="{{ $truyen->id_truyen }}">
 
                     Tên truyện
@@ -46,6 +46,7 @@
                     </div> --}}
                     <br>
                     <input type="submit" value="Lưu lại" class="btn btn-info">
+                    <a href="{{ url('truyen') }}" class="btn btn-outline-secondary">Hủy</a>
                 </form>
         </div>
     </div>

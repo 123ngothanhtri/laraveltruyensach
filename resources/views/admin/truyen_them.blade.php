@@ -44,6 +44,7 @@
                     </div>
                     <br>
                     <input class="btn btn-info" type="submit" value="Thêm">
+                    <a href="{{ url('truyen') }}" class="btn btn-outline-secondary">Hủy</a>
                 </form>
         </div>
     </div>

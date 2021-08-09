@@ -1,7 +1,7 @@
 @extends('admin.layout')
 
 @section('content')
-<div class="card">
+<div class="card ">
   <div class="card-header">
     <h3>Thể loại truyện</h3>
   </div>
@@ -32,7 +32,7 @@
       </div>
       <!-- Modal -->
     <table class="table table-hover table-sm">
-        <tr class="font-weight-bold table-info">
+        <tr class="font-weight-bold table-secondary">
             <td>Mã thể loại</td>
             <td>Tên thể loại</td>
         </tr>

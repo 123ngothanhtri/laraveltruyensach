@@ -34,5 +34,5 @@ Route::get('/loc/{id_theloai}', [App\Http\Controllers\HomeController::class, 'lo
 
 Route::get('/lien-he', [App\Http\Controllers\LienHeController::class, 'lienhe']);
 Route::get('/quan-ly-lien-he', [App\Http\Controllers\LienHeController::class, 'quanlylienhe']);
-Route::get('/xoa-lien-he', [App\Http\Controllers\LienHeController::class, 'xoalienhe']);
+Route::get('/xoa-lien-he/{id}', [App\Http\Controllers\LienHeController::class, 'xoalienhe']);
 Route::post('/them-lien-he', [App\Http\Controllers\LienHeController::class, 'themlienhe']);

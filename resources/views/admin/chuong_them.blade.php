@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="card ">
+    <div class="card">
         <div class="card-header">
             <h4>Thêm chương</h4>
         </div>
@@ -27,6 +27,7 @@
                 Nội dung
                 <textarea name="editor" id="editor" rows="30" cols="80"></textarea>
                 <input class="btn btn-info" type="submit" value="Thêm">
+                <a href="{{ url('chuong') }}" class="btn btn-outline-secondary">Hủy</a>
             </form>
         </div>
     </div>
