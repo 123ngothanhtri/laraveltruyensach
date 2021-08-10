@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
+Route::get('/thong-ke', [App\Http\Controllers\ThongKeController::class, 'thongke']);
 
 Route::get('/the-loai', [App\Http\Controllers\TheLoaiController::class, 'index']);
 Route::post('/the-loai-them', [App\Http\Controllers\TheLoaiController::class, 'store']);

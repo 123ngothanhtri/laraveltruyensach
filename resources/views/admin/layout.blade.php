@@ -22,6 +22,9 @@
                 <li class="nav-item active">
                     <a class=" btn" href="{{ url('/') }}">Home </a>
                 </li>
+                <li class="nav-item ">
+                    <a class=" btn" href="{{ url('/thong-ke') }}">Thống kê </a>
+                </li>
                 <li class="nav-item">
                     <a class=" btn" href="{{ url('the-loai') }}">Thể loại</a>
                 </li>
@@ -40,6 +43,7 @@
             </form>
         </div>
     </nav>
+    
     <div class="container">
         @yield('content')
     </div>
