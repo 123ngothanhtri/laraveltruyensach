@@ -11,7 +11,7 @@ class Chuong extends Migration
         Schema::create('chuong', function (Blueprint $table) {
             $table->id('id_chuong');
             $table->string('ten_chuong');
-            $table->text('noidung_chuong')->default('Không có nội dung');
+            $table->text('noidung_chuong')->nullable();
             $table->integer('luotxem_chuong')->default('0');
             $table->date('ngaythem_chuong')->nullable();
             $table->unsignedBigInteger('id_truyen');
