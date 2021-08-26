@@ -31,7 +31,7 @@ class TruyenController extends Controller
         $new->ten_truyen = $r->ipt;
         $new->id_theloai = $r->iptl;
         $new->trangthai_truyen = $r->iptt;
-        $new->ngayphathanh_truyen = $r->ipnph;
+        $new->ngayphathanh_truyen = date('Y-m-d');
         $new->mota_truyen = $r->ipmt;
         $new->tacgia_truyen = $r->iptg;
         $new->hinhanh_truyen = $r->file('ipha')->store('hinhanh','public');
@@ -57,7 +57,7 @@ class TruyenController extends Controller
         $capnhat=Truyen::find($r->ipidt);
         $capnhat->ten_truyen = $r->ipt;
         //$capnhat->id_theloai = $r->iptl;
-        $capnhat->ngayphathanh_truyen = $r->ipnph;
+        //$capnhat->ngayphathanh_truyen = date('Y-m-d');
         $capnhat->trangthai_truyen = $r->iptt;
         $capnhat->mota_truyen = $r->ipmt;
         $capnhat->tacgia_truyen = $r->iptg; 

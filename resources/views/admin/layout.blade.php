@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light alert-info">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
         <a class="navbar-brand" href="#">ADMIN</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,22 +20,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class=" btn" href="{{ url('/') }}">Home </a>
+                    <a class=" btn btn-info" href="{{ url('/') }}">Home </a>
                 </li>
                 <li class="nav-item ">
-                    <a class=" btn" href="{{ url('/thong-ke') }}">Thống kê </a>
+                    <a class=" btn btn-info" href="{{ url('/thong-ke') }}">Thống kê </a>
                 </li>
                 <li class="nav-item">
-                    <a class=" btn" href="{{ url('the-loai') }}">Thể loại</a>
+                    <a class=" btn btn-info" href="{{ url('the-loai') }}">Thể loại</a>
                 </li>
                 <li class="nav-item">
-                    <a class=" btn" href="{{ url('truyen') }}">Truyện</a>
+                    <a class=" btn btn-info" href="{{ url('truyen') }}">Truyện</a>
                 </li>
                 <li class="nav-item">
-                    <a class=" btn" href="{{ url('chuong') }}">Chương</a>
+                    <a class=" btn btn-info" href="{{ url('chuong') }}">Chương</a>
                 </li>
                 <li class="nav-item">
-                    <a class=" btn" href="{{ url('quan-ly-lien-he') }}">Liên hệ</a>
+                    <a class=" btn btn-info" href="{{ url('quan-ly-lien-he') }}">Liên hệ</a>
                 </li>
             </ul>
             <form id="logout-form" action="{{ route('logout') }}" method="POST">@csrf

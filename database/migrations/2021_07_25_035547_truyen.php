@@ -14,7 +14,7 @@ class Truyen extends Migration
             $table->string('hinhanh_truyen');
             $table->string('mota_truyen',999)->default('Đang cập nhật');
             $table->string('tacgia_truyen')->default('Đang cập nhật');
-            $table->date('ngayphathanh_truyen')->default('Đang cập nhật');
+            $table->date('ngayphathanh_truyen')->nullable();
             $table->string('nguon_truyen')->default('Đang cập nhật');
             $table->string('trangthai_truyen')->default('Đang ra');
             $table->unsignedBigInteger('id_theloai');

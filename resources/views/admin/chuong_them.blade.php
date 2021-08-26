@@ -25,10 +25,11 @@
                 </select>
 
                 Nội dung
-                <textarea name="editor" id="editor" rows="30" cols="80"></textarea>
+                <textarea name="editor" id="editor"></textarea>
                 <input class="btn btn-info" type="submit" value="Thêm">
-                <a href="{{ url('chuong') }}" class="btn btn-outline-secondary">Hủy</a>
+                <a href="{{ url('chuong') }}" class="btn btn-outline-secondary">Hủy</a><p class="text-right">Upload ảnh tại <a href="https://imgbb.com" target="_blank">imgbb.com</a></p>
             </form>
+            
         </div>
     </div>
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>

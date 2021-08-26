@@ -34,9 +34,7 @@
 
                     Tác giả
                     <input class="form-control" type="text" name="iptg" required>
-                    Ngày phát hành
-                    <input class="form-control" type="date" name="ipnph" required>
-
+                    
                     Hình ảnh
                     <div>
                         <input type="file" name="ipha" id="upload" onchange="preview_image(event)" required accept="image/*" class="form-control" >

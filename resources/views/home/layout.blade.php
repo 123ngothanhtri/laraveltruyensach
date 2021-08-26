@@ -47,7 +47,7 @@
                             <a class="text-dark" href="{{ url('/') }}">Trang chủ</a>
                         </li>
                         <li>
-                            <a class="text-dark" href="{{ url('chuong') }} ">Đăng nhập</a>
+                            <a class="text-dark" href="{{ url('thong-ke') }} ">Đăng nhập</a>
                         </li>
                     </ul>
                 </div>

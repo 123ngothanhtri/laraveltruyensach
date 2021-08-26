@@ -18,7 +18,7 @@
             <td>Hình ảnh</td>
             <td>Tên truyện</td>
             <td>Tác giả</td>
-            <td>Ngày phát hành</td>
+            <td>Ngày tạo</td>
             <td>Trạng thái</td>
             <td>Thể loại</td>
             <td>Mô tả</td>
